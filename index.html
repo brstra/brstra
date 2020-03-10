@@ -3,9 +3,13 @@
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.8/jquery.csv.min.js"></script>
 <script>
-fetch("https://docs.google.com/spreadsheets/d/1zkgx7sZt5527G4_wEHsUHNkc6QkUenHyABRfwbsLmfw/gviz/tq?tqx=out:csv").then(res => res.text()).then(function(text) {
+
+fetch("https://docs.google.com/spreadsheets/d/1zkgx7sZt5527G4_wEHsUHNkc6QkUenHyABRfwbsLmfw/gviz/tq?tqx=out:csv")
+.then(res => res.text())
+.then(function(text) {
     console.log($.csv.toObjects(text));
   });
+
 </script>
 </head>
 
